@@ -1,23 +1,53 @@
-
-
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-import java.util.LinkedList;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 
 public class Main {
-    public static void main(String[] args){
 
-            List <String> in =new ArrayList<String>();
-            in.add("10");
-            in.add("hai");
-           Object a= in.get(0);
-        System.out.println(in.size());
+    public static void main(String[] args) throws Exception {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int tc = Integer.parseInt(br.readLine());
+        while (tc-- > 0) {
+            int n = Integer.parseInt(br.readLine());
+            int[] arr = new int[n];
+            String[] inputLine = br.readLine().split(" ");
+            for (int i = 0; i < n; i++) {
+                arr[i] = Integer.parseInt(inputLine[i]);
+            }
 
-        Iterator itr = in.iterator();
-        while(itr.hasNext())
-        System.out.println(itr.next());
+            new Solution().pushZerosToEnd(arr, n);
+            for (int i = 0; i < n; i++) {
+                System.out.print(arr[i] + " ");
+            }
+            System.out.println();
+        }
+    }
+}
+// } Driver Code Ends
 
 
+//User function Template for Java
+
+class Solution {
+    void pushZerosToEnd(int[] arr, int n) {
+        
+        int [] temp=new int[n];
+        
+        
+        int low=0;
+        int high=n-1;
+        for(int i=0;i<n;i++)
+        {
+            if(arr[i]==0)
+            temp[high--]=0;
+            else
+            temp[low++]=arr[i];
+            
+        }
+        
+        
+        for(int i=0;i<n;i++)
+        arr[i]=temp[i];
+    
+        // code here
     }
 }
