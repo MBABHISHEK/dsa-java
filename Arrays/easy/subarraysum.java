@@ -64,48 +64,4 @@ class Solution
             result.add(-1);
         return result;
     }
-
-
-
-
-
-
-
-        /*int sum,flag=0;
-          ArrayList<Integer> a=new ArrayList<>();
-        for(int i=0;i<n;i++)
-        {
-            sum=arr[i];
-            if(sum==s)
-                {
-                    flag=1;
-                    a.add(i+1);
-                    a.add(i+1);
-                    break;
-                }
-                
-            for(int j=i+1;j<n;j++)
-            {
-        
-                sum+=arr[j];
-                if(sum>s)
-                break;
-         
-                if(sum==s)
-                {
-                    flag=1;
-                    a.add(i+1);
-                    a.add(j+1);
-                    break;
-                }
-                
-            }
-            if(flag==1)
-            break;
-        }
-            
-        if(flag==0)
-        a.add(-1);
-    
-        return a;*/
 }
