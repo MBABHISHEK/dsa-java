@@ -1,5 +1,5 @@
 import java.util.Collections;
-
+import java.util.*;
 class Solution {
     public int distributeCandies(int[] candyType) {
         Set<Integer> typeCandySet = new HashSet<>();
