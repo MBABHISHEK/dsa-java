@@ -1,3 +1,4 @@
+https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses/
 class Solution {
     public String minRemoveToMakeValid(String s) {
         Stack<Integer> stack=new Stack<>();
